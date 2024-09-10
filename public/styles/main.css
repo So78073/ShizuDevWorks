@@ -1,0 +1,250 @@
+:root {
+    --marginDefault: 50px 0px 50px 0px;
+    --borderRadiusDefalt: 8px;
+    --fontMid: 4rem;
+    --defaultWidth: 85%;
+    --fontColor: #808080;
+    --linkColor: #a200ff;
+    /* portfolio vars */
+    --gradiente: linear-gradient(to left, #6557ff, #d000ff);
+}
+
+@font-face {
+    font-family: 'OCRA Std';
+    src: url('/public/assets/OCRAStd.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #121212;
+    color: #E0E0E0;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    font-family: 'OCRA Std', monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+h1 {
+    color: white;
+    align-self: center;
+    font-size: 2vw;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    border-radius: var(--borderRadiusDefalt);
+    margin: 20px 0px 20px 0px;
+    background-color: #00000000;
+    border: none;
+}
+.header:hover{
+    scale: 1.01;
+}
+.header:active{
+    scale: 1.0;
+}
+
+.header img {
+    width: 70vw;
+    height: auto;
+    align-self: center;
+    justify-self: center;
+}
+
+.DownloadArea {
+    margin: var(--marginDefault);
+    width: var(--defaultWidth);
+    display: flex;
+    align-self: center;
+    gap: 50px;
+}
+
+
+/* RIGHT SIDE */
+
+.DownloadArea_Left {
+    width: 100%;
+    background-color: darkorchid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    border-radius: var(--borderRadiusDefalt);
+}
+
+.sysOption {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 25px;
+}
+
+.cardDownload {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: var(--borderRadiusDefalt);
+    width: 95%;
+    outline: none;
+    border: none;
+    align-self: center;
+    
+}
+
+.cardDownload:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.26);
+}
+
+.cardDownload img {
+    align-self: center;
+    margin-bottom: 15px;
+    width: 5vw;
+    margin: 10px;
+    padding: 0px;
+    pointer-events: none; /* Faz com que cliques passem por baixo */
+}
+
+
+/* RIGHT SIDE */
+
+.DownloadArea_right {
+    width: 100%;
+    flex-grow: 2;
+    display: flex;
+    background-image: var(--gradiente);
+    border-radius: var(--borderRadiusDefalt);
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.DownloadArea_right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--borderRadiusDefalt);
+}
+
+
+/* Read more */
+
+.ReadMore {
+    display: flex;
+    flex-direction: column;
+}
+
+.box{
+    width: 90%;
+    align-self: center;
+    justify-self: center;
+    margin-top: 50px;
+}
+
+.box:hover{
+    scale: 1.01;
+}
+
+.box a{
+    color: var(--linkColor);
+}
+
+.box a:hover{
+    background-color: #a200ff21;
+}
+
+.About {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.About p {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px; /* Ajuste o tamanho conforme necessário */
+    line-height: 1.5;
+    color: var(--fontColor);  /* Você pode ajustar a cor também */
+    
+}
+
+.box h1{
+
+    color: var(--fontColor); 
+}
+
+/* footer*/
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    margin-top: 150px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+.overlay-bg {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Cor de fundo semitransparente */
+    backdrop-filter: blur(10px); /* Desfoque do fundo */
+    z-index: 999; /* Colocar o fundo abaixo da .overlay */
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--fontColor);
+    background-color: #121212;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Garantir que a div fique acima de outros elementos */
+    text-align: center;
+    padding: 20px;
+}
+/* TRASITIONS */
+
+.transitionSimple:hover {
+    scale: 1.01;
+}
+
+
+@media (max-width: 1080px) {
+    .DownloadArea {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    .sysOption {
+        flex-direction: row;
+    }
+}
