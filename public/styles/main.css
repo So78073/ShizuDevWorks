@@ -182,8 +182,9 @@ h1 {
 }
 
 .box h1{
-
-    color: var(--fontColor); 
+    font-size: 2vw;
+    color: var(--fontColor);
+    
 }
 
 /* footer*/
@@ -247,4 +248,13 @@ footer p {
     .sysOption {
         flex-direction: row;
     }
+
+
 }
+@media (max-width: 700px) {
+
+    .box h1{
+        font-size: 5vw;
+    }
+}
+
