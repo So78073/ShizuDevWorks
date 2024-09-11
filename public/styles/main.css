@@ -4,7 +4,7 @@
     --fontMid: 4rem;
     --defaultWidth: 85%;
     --fontColor: #6b6b6b;
-    --linkColor: #2f00ff;
+    --linkColor: #6f00ff;
 
 }
 
@@ -256,6 +256,26 @@ footer p {
     scale: 1.01;
 }
 
+.githubAcess {
+    width: 70%;
+    align-self: center;
+    justify-self: center;
+    height: 60px;
+    border-radius: 5px;
+    background-color: var(--linkColor);
+    border: none;
+    opacity: 0.5;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.githubAcess:hover{
+    scale: 1.01;
+    opacity: 0.6;
+}
 
 @media (max-width: 1080px) {
     .DownloadArea {
