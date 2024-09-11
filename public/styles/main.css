@@ -3,10 +3,13 @@
     --borderRadiusDefalt: 8px;
     --fontMid: 4rem;
     --defaultWidth: 85%;
-    --fontColor: #808080;
-    --linkColor: #a200ff;
-    /* portfolio vars */
-    --gradiente: linear-gradient(to left, #6557ff, #d000ff);
+    --fontColor: #6b6b6b;
+    --linkColor: #2f00ff;
+
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 @font-face {
@@ -17,7 +20,7 @@
 }
 
 body {
-    background-color: #121212;
+    background-color: #000000;
     color: #E0E0E0;
     padding: 0px;
     margin: 0px;
@@ -75,7 +78,7 @@ h1 {
 
 .DownloadArea_Left {
     width: 100%;
-    background-color: darkorchid;
+    background-color: var(--linkColor);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -127,10 +130,10 @@ h1 {
     width: 100%;
     flex-grow: 2;
     display: flex;
-    background-image: var(--gradiente);
+    background: var(--linkColor);
     border-radius: var(--borderRadiusDefalt);
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    
 }
 
 .DownloadArea_right img {
@@ -188,6 +191,20 @@ h1 {
 }
 
 /* footer*/
+
+.qrCodePortifolio {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.qrCodePortifolio img{
+    width: 10%;
+    align-self: center;
+    justify-self: center;
+    margin-top: 50px;
+    border-radius: 10px;
+}
 
 footer {
     background-color: #333;
